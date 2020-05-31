@@ -1,0 +1,56 @@
+Contoh barang:
+1. T-shirt Polo Pink
+- Harga : Rp. 55.000
+- Stok : 10
+- Keterangan : Ukuran 2.10 x 1.10
+
+2. T-shirt Polo Hijau
+- Harga : Rp. 50.000
+- Stok : 10
+- Keterangan : Ukuran 2.10 x 1.10
+
+3. T-shirt Polo Kuning
+- Harga : Rp. 60.000
+- Stok : 10
+- Keterangan : Ukuran 2.10 x 1.10
+
+
+1. Merancang Database
+- User
+- Barang
+  1. Nama barang
+  2. Harga
+  3. Stok
+  4. Keterangan
+
+- Pesanan (1)
+  1. user_id (one to many : user)	: Budi
+  2. tanggal 				: 25 Mei
+  3. jumlah_harga			: 160.000
+  4. status
+ 
+- Pesanan Detail
+  1. barang_id (one to many : barang)   : Polo Hijau  	| Polo Kuning
+  2. pesanan_id (one to many : pesanan) : 1  		| 1 
+  3. jumlah				: 2		| 1
+  4. jumlah_harga			: 100.000	| 60.000
+
+Contoh kasus: Budi akan beli T-shirt pada tanggal 25 Mei. dia memesan T-shirt hijau sebanyak 2, dan kuning sebanyak 1.
+  
+
+1. Relasi One to many (User - Pesanan)
+
+Model : User
+public function pesanan() 
+{
+     return $this->hasMany('App\Pesanan','user_id', 'id');
+}
+
+Model : Pesanan
+public function user()
+{
+      return $this->belongsTo('App\User','user_id', 'id');
+}
+
+2. Link Font Awesome
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
