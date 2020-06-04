@@ -35,7 +35,7 @@
                                 <td>{{ $pesanan->tanggal }}</td>
                                 <td>
                                     @if($pesanan->status == 1)
-                                    Sudah Pesan & Belum dibayar
+                                    Sudah pesan & belum dibayar
                                     @else
                                     Sudah dibayar 
                                     @endif

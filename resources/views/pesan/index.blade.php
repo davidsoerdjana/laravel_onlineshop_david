@@ -48,7 +48,7 @@
                                             <form method="post" action="{{ url('pesan') }}/{{ $barang->id }}" >
                                             @csrf
                                                 <input type="text" name="jumlah_pesan" class="form-control" required="">
-                                                <button type="submit" class="btn btn-primary mt-2"><i class="fa fa-shopping-cart"></i> Masukkan Keranjang</button>
+                                                <button type="submit" class="btn btn-primary mt-2"><i class="fa fa-shopping-cart"></i> Masukkan keranjang</button>
                                             </form>
                                         </td>
                                     </tr>

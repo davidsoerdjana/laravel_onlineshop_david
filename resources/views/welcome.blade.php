@@ -65,6 +65,7 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+            
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
@@ -81,11 +82,10 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    <img src="{{ url('images/logo.png') }}" class="rounded mx-auto d-block" width="700" alt="">
+                    <img src="{{ url('images/logoo.png') }}" class="rounded mx-auto d-block" width="700" alt="">
                 </div>
-
-               
             </div>
+
         </div>
     </body>
 </html>

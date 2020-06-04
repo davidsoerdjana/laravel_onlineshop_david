@@ -80,7 +80,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="nohp" class="col-md-2 col-form-label text-md-right">No. HP</label>
+                            <label for="nohp" class="col-md-2 col-form-label text-md-right">No HP</label>
 
                             <div class="col-md-6">
                                 <input id="nohp" type="text" class="form-control @error('nohp') is-invalid @enderror" name="nohp" value="{{ $user->nohp }}" required autocomplete="nohp" autofocus>

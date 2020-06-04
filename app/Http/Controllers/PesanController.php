@@ -108,7 +108,7 @@ class PesanController extends Controller
 
         $pesanan_detail->delete();
 
-        Alert::error('Pesanan Sukses Dihapus', 'Hapus');
+        Alert::error('Pesanan berhasil dihapus', 'Hapus');
         return redirect('check-out');
     }
 
@@ -118,13 +118,13 @@ class PesanController extends Controller
 
         if(empty($user->alamat))
         {
-            Alert::error('Identitasi Harap dilengkapi', 'Error');
+            Alert::error('Data anda harap dilengkapi', 'Error');
             return redirect('profile');
         }
 
         if(empty($user->nohp))
         {
-            Alert::error('Identitas harap dilengkapi', 'Error');
+            Alert::error('Data anda harap dilengkapi', 'Error');
             return redirect('profile');
         }
 
@@ -142,7 +142,7 @@ class PesanController extends Controller
 
 
 
-        Alert::success('Pesanan sukses checkout. Silahkan lanjutkan proses pembayaran', 'Success');
+        Alert::success('Pesanan berhasil. Silahkan lanjut ke proses pembayaran', 'Success');
         return redirect('history/'.$pesanan_id);
 
     }
